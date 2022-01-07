@@ -34,5 +34,5 @@ USER root
 RUN chown -R ${user}:${user} node_modules
 USER ${user}
 
-RUN npm build
+RUN npm run build
 CMD [ "npm", "run", "start" ]
