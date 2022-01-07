@@ -22,13 +22,16 @@ RUN mkdir -p node_modules
 
 COPY package*.json ./
 
+USER root
+RUN chown ${user}:${user} package*.json
+
+USER ${user}
 RUN npm install
 
 COPY . .
 
 USER root
 RUN chown -R ${user}:${user} node_modules
-RUN chown ${user}:${user} package*.json
 USER ${user}
 
 RUN npm build
