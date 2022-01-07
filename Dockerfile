@@ -33,4 +33,3 @@ USER ${user}
 
 RUN npm build
 CMD [ "npm", "run", "start" ]
-# EXPOSE 9090
