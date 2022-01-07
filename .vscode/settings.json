@@ -1,0 +1,64 @@
+{
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "explorer.confirmDelete": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+
+    "[sass]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+
+    "[vue-html]": {
+        "editor.tabSize": 2
+    },
+
+    "[vue-postcss]": {
+        "editor.tabSize": 2
+    },
+    
+    "[django-html]": {
+        "editor.tabSize": 2
+    },
+    "tabnine.experimentalAutoImports": true,
+    "task.problemMatchers.neverPrompt": {
+        "shell": true
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "files.associations": {
+        "*.html": "django-html"
+    },
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "window.zoomLevel": 1,
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "force-expand-multiline"
+        },
+        "prettyhtml": {
+            "printWidth": 100,
+            "singleQuote": false,
+            "wrapAttributes": false,
+            "sortAttributes": false
+        }
+    },
+}

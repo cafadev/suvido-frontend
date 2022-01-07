@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Vue server",
+      "detail": "vue-cli-service serve",
+      "type": "shell",
+      "command": "npm run serve -- --port 9090",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Vue build",
+      "detail": "vue-cli-service build",
+      "type": "shell",
+      "command": "npm run build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+  ]
+}
