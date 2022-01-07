@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-application:
+    runs-on: self-hosted
+    name: 🎉 Deploying into server
+    
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    # - name: Copying .env file for production
+    #   run: cp .env.prod .env
+
+    - name: Build docker
+      run: docker-compose up --build -d

@@ -1,6 +1,6 @@
 FROM node:16.13.1
 
-RUN apt-get -y update && apt-get -y install git
+# RUN apt-get -y update && apt-get -y install git
 # RUN npm install npm -g && npm update npm -g
 
 RUN userdel -r node
@@ -20,15 +20,17 @@ WORKDIR /home/${user}/app
 
 RUN mkdir -p node_modules
 
-# COPY package*.json ./
+COPY package*.json ./
 
-# RUN npm install
+RUN npm install
 
 COPY . .
 
 USER root
 RUN chown -R ${user}:${user} node_modules
-# RUN chown ${user}:${user} package*.json
+RUN chown ${user}:${user} package*.json
 USER ${user}
 
+RUN npm build
+CMD [ "npm", "run", "start" ]
 # EXPOSE 9090

@@ -58,8 +58,8 @@ export default Vue.extend({
     triggerLogin() {
       this.login({
         ...this.form,
-        client_id: 'zTmFKEvGOBynEietu7iU5zPOdKPS1T5bsVtb9YUB',
-        client_secret: 'Tjr1wxf1zLrQNVPysLJxyPNWV6LwCCEgq8NtWTj8is8uSrCOsCydciBjFUYHZ4gqqiWEcIGt3aEa2Ff20HHWAwt6oYSFuqMWrYv1NYmYiOfARonsKz7FTZFs0hAu87HQ',
+        client_id: 'pBwCG2JPsjDQevUvFLCL5FJADgLIe4FvJhxAzj2M',
+        client_secret: '9VMNMfHPDTxTUVHR94kxHQucPupmQJxJWyc8Vh9avhpNYHVvNPsuVDwOdTaAhhnxHlfGWGZHvFtLA35hPiO95MRnERuEumRWuNVsH76f9a5CwdF35KxtQYgDSB02m2bR',
       })
     },
 

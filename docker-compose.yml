@@ -9,12 +9,12 @@ services:
       - '.:/home/frontend/app'
       - '/home/frontend/app/node_modules'
     ports:
-      - "9090:9090"
-    tty: true
+      - "3000:3000"
+    # tty: true
     expose:
-      - 9090
+      - 3000
 
-networks: 
-  default: 
-    external: 
-      name: suvido-network
+# networks: 
+#   default: 
+#     external: 
+#       name: suvido-network
