@@ -36,6 +36,7 @@
             TOP 10
           </s-button>
           <s-button
+            v-if="isLogged"
             @click="fetchMyDownloadedVideos"
             :class="myDownloadsListStyles"
           >
