@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/vue
 {
 	"name": "Vue project container",
-	"dockerComposeFile": "../docker-compose.yml",
+	"dockerComposeFile": "../docker-compose.development.yml",
 	"service": "frontend",
 	"workspaceFolder": "/home/frontend/app",
 

@@ -51,7 +51,8 @@
     </section>
 
     <progress-circles v-else>
-      <p class="font-bold">
+      <p class="text-center text-orange-400 font-bold mb-4">{{ downloadProgress }}</p>
+      <p class="font-bold text-blue-400">
         <span>
           La descarga puede durar varios minutos dependiendo de la duración del video
           y tu velocidad de internet. Te avisaremos si la descarga se interrumpe.
@@ -77,15 +78,21 @@ export default Vue.extend({
   data() {
     return {
       isDropdownVisible: false,
-      downloadingVideo: false
+      downloadingVideo: false,
+      downloading: 0
     }
   },
 
   computed: {
-    videoDurationInMinutes() {
+    videoDurationInMinutes(): string {
       const seconds = this.video.duration || 0
       const minutes = (seconds / 60).toFixed(0)
       return seconds < 60 ? `${seconds} seconds` : `${minutes} minutes`
+    },
+
+    downloadProgress(): string {
+      const mb = (this.downloading / 1000) / 1000
+      return `${mb.toFixed(2)}MB`
     }
   },
 
@@ -99,6 +106,11 @@ export default Vue.extend({
     downloadResource(format: { url: string, ext: string }) {
       this.toggleDropdown()
       this.downloadingVideo = true
+      this.downloading = 0
+
+      const setDownloading = ({ loaded }: { loaded: number }) => {
+        this.downloading = loaded
+      }
 
       this.$axios({
         url: 'videos/',
@@ -106,7 +118,7 @@ export default Vue.extend({
         responseType: 'blob',
         data: { video_url: this.video.url, format_url: format.url },
         onDownloadProgress(progress) {
-          console.log(progress)
+          setDownloading(progress)
         }
       })
       .then((response) => {
