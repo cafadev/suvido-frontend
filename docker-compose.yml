@@ -1,13 +1,6 @@
 version: '3.7'
 
 services:
-  nginx:
-    build: ./nginx
-    ports:
-      - 3001:3001
-    depends_on:
-      - frontend
-
   frontend:
     build: .
     environment:
@@ -20,6 +13,13 @@ services:
     # tty: true
     expose:
       - 3000
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 3001:3001
+    depends_on:
+      - frontend
 
 # networks: 
 #   default: 

@@ -20,7 +20,7 @@
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [9090],
+	"forwardPorts": [3000],
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postStartCommand": "git config --global user.email \"cafadev@outlook.com\" && git config --global user.name \"Christopher Flores\""
