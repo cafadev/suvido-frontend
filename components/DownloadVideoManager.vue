@@ -131,6 +131,8 @@ export default Vue.extend({
         link.setAttribute('download', filename);
         document.body.appendChild(link);
         link.click();
+
+        this.$emit('download')
       }).finally(() => {
         this.downloadingVideo = false
       });

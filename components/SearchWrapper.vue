@@ -12,7 +12,7 @@
     </section>
 
     <div class="pt-10">
-      <download-video-manager v-if="video.formats.length" :video="video" />
+      <download-video-manager v-if="video.formats.length" @download="$emit('download')" :video="video" />
     </div>
 
     <progress-circles v-if="loading">

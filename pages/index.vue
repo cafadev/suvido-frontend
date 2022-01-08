@@ -15,7 +15,7 @@
         <the-navbar />
       </header>
 
-      <search-wrapper v-model="searchVideoUrl" />
+      <search-wrapper v-model="searchVideoUrl"  @download="fetchAllDownloadedVideos" />
 
       <div class="flex justify-center xl:hidden py-10">
         <div class="rounded-full w-60 h-60 bg-orange-400 shadow-2xl shadow-orange-400 justify-center items-center flex">
