@@ -20,7 +20,7 @@ WORKDIR /home/${user}/app
 
 RUN mkdir -p node_modules
 
-COPY package*.json ./
+COPY --chown=${user}:${user} package*.json ./
 
 RUN npm install
 
