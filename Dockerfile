@@ -20,16 +20,15 @@ WORKDIR /home/${user}/app
 
 RUN mkdir -p node_modules
 
-COPY package*.json ./
+COPY --chown=${user}:${user} package*.json ./
 
 RUN npm install
 
 COPY . .
 
 RUN chown -R ${user}:${user} node_modules
-# RUN chown ${user}:${user} package*.json
 
-USER ${user}
+# USER ${user}
 
 RUN npm run build
 ENTRYPOINT ["./entrypoint.sh"]
