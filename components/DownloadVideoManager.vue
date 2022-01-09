@@ -19,7 +19,7 @@
         <div class="flex justify-center md:flex-nowrap md:justify-start mt-5">
           <div class="flex md:items-end">
             <button
-              @click="downloadResource"
+              @click="downloadResource(video.formats[0])"
               class="py-2 px-4 capitalize tracking-wide bg-blue-500 text-white font-medium rounded hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
             >
               Download
